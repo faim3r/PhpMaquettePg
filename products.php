@@ -122,8 +122,8 @@ echo ('<div class="container" >');
 echo ('<div class="row">');
 foreach ($afficheProduits as $afficheProduit){?>
     <div class="show">
-    <h3><?=$afficheProduit['name'].'<br>'?></h3>
-    <img src="<?=$afficheProduit['photo']?>"><br></p>
+        <h3><?=$afficheProduit['name'].'<br>'?></h3>
+        <img src="<?=$afficheProduit['photo']?>"><br></p>
     </div>
     <?php
 }
