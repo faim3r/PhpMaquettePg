@@ -57,6 +57,7 @@ include ('inc/header.php');
         </div>
     </div>
 </div>
+
 <?php
 
 //-------------------------------------ELSE----------------------------------------------------
@@ -105,16 +106,12 @@ if ($_GET) {
                     <p><?=$article['name'].'<br>'?></p>
                     <img src="<?=$article['photo']?>"><br></p>
                 </div>
-
                 <?php
             }
         }
-
-
     }
 }
 //----------------------- AFFICHAGE BASIQUE DES PRODUITS SOUS LE CHAMPS RECHERCHE ----------------------->
-
 // Requete pour affichage général des produits
 $afficheProduits = $bdd -> query('SELECT * FROM products');
 $afficheProduits = $afficheProduits->fetchAll();
