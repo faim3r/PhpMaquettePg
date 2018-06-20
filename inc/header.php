@@ -32,44 +32,51 @@ if(isset($_GET['deco'])){
         <li class="nav-item">
           <a class="nav-link" href="formulaire_contact.php">Contact</a>
         </li>
+        <?php
+        if(!empty($_POST)){
+          //si post n'est pas vide, c'est que l'utilisateur a bien envoyé quelquechose
+          $errors = [];
+          
+          if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            echo 'Veuillez entrer un e-mail<br>';
+          }
+          
+          if(strlen($_POST['password']) < 4 || strlen($_POST['password']) > 10){
+            $errors[] = 'Mot de passe incorect<br>';
+          }
+          
+          if(empty($errors)){
+            $verif = $bdd->prepare('SELECT * FROM users WHERE email = :email');
+            $verif->bindValue(':email', strip_tags(trim($_POST['email'])));
+            $verif->execute();
+            $resultat = $verif->fetchAll();
+  
+            if(count($resultat) === 1) {
+              $mdpCryp = $resultat[0]['password'];
+            }
+  
+            if(isset($mdpCryp) && trim($_POST['password'])){      
+              $_SESSION['id'] = $resultat[0]['id'];
+              $_SESSION['email'] = strip_tags($_POST['email']);
+              $_SESSION['user_name'] = $resultat[0]['user_name'];
+              $_SESSION['role'] = $resultat[0]['role'];
+            }else{
+              //on affiche les erreurs
+              echo implode('<br>', $errors);
+            }
+          }
+        }
+        if(isset($_SESSION['id']) && ($_SESSION['role'] == 'ROLE_ADMIN' || $_SESSION['role'] == 'ROLE_USER')){
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="user.php">Mon Profil</a>
+        </li>
+        <?php
+        }
+        ?>
       </ul>
-      <?php
-      if(!empty($_POST)){
-        //si post n'est pas vide, c'est que l'utilisateur a bien envoyé quelquechose
-        $errors = [];
-        
-        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-          echo 'Veuillez entrer un e-mail<br>';
-        }
-        
-        if(strlen($_POST['password']) < 4 || strlen($_POST['password']) > 10){
-          $errors[] = 'Mot de passe incorect<br>';
-        }
-        
-        if(empty($errors)){
-          $verif = $bdd->prepare('SELECT * FROM users WHERE email = :email');
-          $verif->bindValue(':email', strip_tags(trim($_POST['email'])));
-          $verif->execute();
-          $resultat = $verif->fetchAll();
-
-          if(count($resultat) === 1) {
-            $mdpCryp = $resultat[0]['password'];
-          }
-
-          if(isset($mdpCryp) && trim($_POST['password'])){      
-            $_SESSION['id'] = $resultat[0]['id'];
-            $_SESSION['email'] = strip_tags($_POST['email']);
-            $_SESSION['user_name'] = $resultat[0]['user_name'];
-            $_SESSION['role'] = $resultat[0]['role'];
-            echo '<h6 class="text-light">Bonjour ' . ' ' . $_SESSION['user_name'] .'</h6>';
-          }else{
-            //on affiche les erreurs
-            echo implode('<br>', $errors);
-          }
-        }
-      }
-      ?>
-      <form class="form-inline my-2 my-lg-0" method="POST">
+      
+      <form class="form-inline my-2 my-lg-0" method="POST" action="admin/user.php">
         <?php
         if(!isset($_SESSION['id'])){
         ?>
@@ -83,6 +90,7 @@ if(isset($_GET['deco'])){
         <?php
         
         if(isset($_SESSION['id']) && ($_SESSION['role'] == 'ROLE_ADMIN' || $_SESSION['role'] == 'ROLE_USER')){
+          echo '<h6 class="text-light">Bonjour ' . ' ' . $_SESSION['user_name'] .'</h6>';
         ?>
           <a href="index.php?deco" class="btn btn-warning active my-2 my-sm-0 ml-3" role="button">Déconnexion</a>
         <?php
