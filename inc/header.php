@@ -76,7 +76,7 @@ if(isset($_GET['deco'])){
         ?>
       </ul>
       
-      <form class="form-inline my-2 my-lg-0" method="POST" action="admin/user.php">
+      <form class="form-inline my-2 my-lg-0" method="POST">
         <?php
         if(!isset($_SESSION['id'])){
         ?>
