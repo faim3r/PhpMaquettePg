@@ -1,4 +1,4 @@
-<footer class="bg-dark">
+<footer class="bg-dark mt-3">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="m-auto">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -17,6 +17,8 @@
         </div>
     </nav>
     <section class="container text-center pb-3 text-light mt-2">
+        <p>1-3, Rue des Trois-Conils</p>
+        <p>05.56.46.58.08</p>
         <h5>Site propulsé par Pierre, David, Julien, Stéphane et Thomas</h5>
     </section>
 </footer>
