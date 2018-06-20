@@ -12,7 +12,7 @@ require_once ('inc/bdd.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>products</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
 
@@ -59,7 +59,7 @@ include ('inc/header.php');
     </div>
 </div>
 
-<<<<<<< HEAD
+
 <?php
 
 //-------------------------------------ELSE----------------------------------------------------
@@ -116,8 +116,8 @@ if ($_GET) {
 
     }
 }
-=======
-//<!----------------------- AFFICHAGE BASIQUE DES PRODUITS SOUS LE CHAMPS RECHERCHE ----------------------->
+
+//----------------------- AFFICHAGE BASIQUE DES PRODUITS SOUS LE CHAMPS RECHERCHE ----------------------->
 
 
 
@@ -155,7 +155,7 @@ foreach ($afficheProduits as $afficheProduit){?>
 
 
 
->>>>>>> 74b080cc4a3791b0ec632e03b091f29263ceec38
+
 
 
 
