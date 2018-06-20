@@ -60,20 +60,20 @@
     <h3 class="text-center mb-4">Présentation de nos produits</h3>
     <div class="d-flex justify-content-center">
         <figure class="figure row">
-            <div class="ml-4 zoom">
-                <img src="app/img/dress.jpg" class="figure-img img-fluid rounded" alt="Robe" title="Robe">
+            <div class="ml-4">
+                <a href="#"><img src="app/img/dress.jpg" class="figure-img img-fluid rounded" alt="Robe" title="Robe"></a>
                 <figcaption class="figure-caption text-center">Une robe rouge</figcaption>
             </div>
             <div class="ml-4">
-                <img src="app/img/coat.jpg" class="figure-img img-fluid rounded" alt="Manteau" title="Manteau">
+                <a href="#"><img src="app/img/coat.jpg" class="figure-img img-fluid rounded" alt="Manteau" title="Manteau"></a>
                 <figcaption class="figure-caption text-center">Un Manteau</figcaption>
             </div>
             <div class="ml-4">
-                <img src="app/img/shoes.jpg" class="figure-img img-fluid rounded" alt="Chaussure" title="Chaussure">
+                <a href="#"><img src="app/img/shoes.jpg" class="figure-img img-fluid rounded" alt="Chaussure" title="Chaussure"></a>
                 <figcaption class="figure-caption text-center">Une paire de chaussures léopard</figcaption>
             </div>
             <div>
-                <img src="app/img/pants.jpg" class="figure-img img-fluid rounded" alt="Pantalon" title="Pantalon">
+                <a href="#"><img src="app/img/pants.jpg" class="figure-img img-fluid rounded" alt="Pantalon" title="Pantalon"></a>
                 <figcaption class="figure-caption text-center">Un pantalon noir</figcaption>
             </div>
         </figure>

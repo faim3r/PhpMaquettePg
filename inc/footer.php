@@ -7,7 +7,7 @@
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Produits</a>
+                        <a class="nav-link" href="products.php">Produits</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="formulaire_contact.php">Contact</a>
@@ -19,6 +19,6 @@
     <section class="container text-center pb-3 text-light mt-2">
         <p>1-3, Rue des Trois-Conils</p>
         <p>05.56.46.58.08</p>
-        <h5>Site propulsé par Pierre, David, Julien, Stéphane et Thomas</h5>
+        <h5>Site propulsé par Julien, Thomas, Pierre, Stéphane et David</h5>
     </section>
 </footer>
