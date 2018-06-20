@@ -12,7 +12,7 @@ require_once ('inc/bdd.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>products</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
 
@@ -44,5 +44,48 @@ include ('inc/header.php');
         </div>
     </div>
 </div>
+
+<!----------------------- AFFICHAGE BASIQUE DES PRODUITS SOUS LE CHAMPS RECHERCHE ----------------------->
+<hr>
+
+<?php
+// Requete pour affichage général des produits
+$afficheProduits = $bdd -> query('SELECT * FROM products');
+$afficheProduits = $afficheProduits->fetchAll();
+echo ('<div class="container" >');
+echo ('<div class="row">');
+foreach ($afficheProduits as $afficheProduit){?>
+    <div class="show">
+    <h3><?=$afficheProduit['name'].'<br>'?></h3>
+    <img src="<?=$afficheProduit['photo']?>"><br></p>
+    </div>
+    <?php
+}
+?>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
