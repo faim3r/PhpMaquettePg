@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once('inc/bdd.php');
-//si l'utilisateur admin est connecté:
-if(isset($_SESSION['id']) AND  $_SESSION['role'] == 'ROLE_ADMIN'){
+///si l'utilisateur admin est connecté:
+if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['role'] == 'ROLE_ADMIN')){
 ?>
 <?php include('inc/header.php') ?>
 <!DOCTYPE html>
@@ -32,8 +31,7 @@ if(isset($_SESSION['id']) AND  $_SESSION['role'] == 'ROLE_ADMIN'){
                 <div class="col-md-8">
                     <h2>Ajouter un utilisateur</h2>
                     <?php
-
-                    
+                    require_once('inc/bdd.php');
                     //traitement de l'inscription
                     if(!empty($_POST)){
                         //si le formulaire a été envoyé
