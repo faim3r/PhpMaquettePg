@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 <?php session_start(); ?>
+=======
+>>>>>>> Formulaire
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+>>>>>>> Formulaire
 
 <?php include('inc/header.php') ?>
 
 <!-- Début SLIDER -->
+<<<<<<< HEAD
 <section class="container">
+=======
+<section class="container mt-3">
+>>>>>>> Formulaire
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -17,6 +30,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
+<<<<<<< HEAD
         <img class="d-block w-100" src="app/img/store1.jpg" alt="Slide 1" title="Photo de la boutique 1">
         </div>
         <div class="carousel-item">
@@ -24,6 +38,15 @@
         </div>
         <div class="carousel-item">
         <img class="d-block w-100" src="app/img/store3.jpg" alt="Slide 3" title="Photo de la boutique 3">
+=======
+        <img class="d-block w-100" src="app/img/store1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="app/img/store2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="app/img/store3.jpg" alt="Third slide">
+>>>>>>> Formulaire
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -38,7 +61,11 @@
 </section>
 <!-- Fin SLIDER -->
 
+<<<<<<< HEAD
 <!-- Début PRÉSENTATION BOUTIQUE -->
+=======
+<!-- Début PRÉSENTATION -->
+>>>>>>> Formulaire
 <section class="container-fluid mt-3 bg-dark">
     <div class="container text-light pt-4 pb-4">
         <h1 class="text-center mb-3">Ma Boutique de OUF !!</h1>
@@ -55,6 +82,7 @@
 </section>
 <!-- Fin PRÉSENTATION -->
 
+<<<<<<< HEAD
 <!-- Début PRÉSENTATION PRODUITS -->
 <section class="container mt-3">
     <h3 class="text-center mb-4">Présentation de nos produits</h3>
@@ -83,6 +111,8 @@
 
 <?php include('inc/footer.php') ?>
 
+=======
+>>>>>>> Formulaire
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
