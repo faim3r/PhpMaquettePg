@@ -33,13 +33,6 @@ if(isset($_GET['deco'])){
           <a class="nav-link" href="formulaire_contact.php">Contact</a>
         </li>
         <?php
-        if(isset($_SESSION['id']) && ($_SESSION['role'] == 'ROLE_ADMIN' || $_SESSION['role'] == 'ROLE_USER')){
-        ?>
-          <li class="nav-item">
-            <a class="nav-link" href="user.php">Mon Profil</a>
-          </li>
-        <?php
-        }
         if(!empty($_POST)){
           //si post n'est pas vide, c'est que l'utilisateur a bien envoyé quelquechose
           $errors = [];
