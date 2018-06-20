@@ -20,7 +20,29 @@ require_once ('bdd.php');
 include ('inc/header.php');
 
 ?>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="get">
+                <div class="form-group">
+                    <label>Pseudo</label>
+                    <input type="text" name="pseudo" class="form-control">
+                </div>
+                <div class="input-group">
+                    <select class="custom-select" id="inputGroupSelect04">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-info">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
