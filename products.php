@@ -1,6 +1,6 @@
 <?php
 
-require_once ('bdd.php');
+require_once ('inc/bdd.php');
 ?>
 
 <!doctype html>
@@ -26,7 +26,7 @@ include ('inc/header.php');
             <form method="get">
                 <div class="form-group">
                     <label>Pseudo</label>
-                    <input type="text" name="pseudo" class="form-control">
+                    <input type="text" name="nom" class="form-control">
                 </div>
                 <div class="input-group">
                     <select class="custom-select" id="inputGroupSelect04">
