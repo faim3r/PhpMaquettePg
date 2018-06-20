@@ -59,6 +59,7 @@ include ('inc/header.php');
     </div>
 </div>
 
+<<<<<<< HEAD
 <?php
 
 //-------------------------------------ELSE----------------------------------------------------
@@ -115,10 +116,50 @@ if ($_GET) {
 
     }
 }
+=======
+//<!----------------------- AFFICHAGE BASIQUE DES PRODUITS SOUS LE CHAMPS RECHERCHE ----------------------->
 
 
 
-
+// Requete pour affichage général des produits
+$afficheProduits = $bdd -> query('SELECT * FROM products');
+$afficheProduits = $afficheProduits->fetchAll();
+echo ('<div class="container" >');
+echo ('<div class="row">');
+foreach ($afficheProduits as $afficheProduit){?>
+    <div class="show">
+    <h3><?=$afficheProduit['name'].'<br>'?></h3>
+    <img src="<?=$afficheProduit['photo']?>"><br></p>
+    </div>
+    <?php
+}
 ?>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 74b080cc4a3791b0ec632e03b091f29263ceec38
+
+
+
+
+
 </body>
 </html>
