@@ -1,13 +1,8 @@
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-=======
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
->>>>>>> Formulaire
     <link rel="stylsheet" href="app/css/style.css">
 </head>
 <body>
 
-<<<<<<< HEAD
 <?php
 require_once('inc/bdd.php');
 //traitement de la déconnexion
@@ -22,13 +17,6 @@ if(isset($_GET['deco'])){
 <header class="mb-3">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php"><img src="app/img/logosmall.jpg" alt="Logo" title="Logo"></a>
-=======
-<?php require_once('inc/bdd.php'); ?>
-
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">Ma Boutique de OUF !!</a>
->>>>>>> Formulaire
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,16 +27,11 @@ if(isset($_GET['deco'])){
           <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
           <a class="nav-link" href="products.php">Produits</a>
-=======
-          <a class="nav-link" href="#">Produits</a>
->>>>>>> Formulaire
         </li>
         <li class="nav-item">
           <a class="nav-link" href="formulaire_contact.php">Contact</a>
         </li>
-<<<<<<< HEAD
         <?php
         if(isset($_SESSION['id']) && ($_SESSION['role'] == 'ROLE_ADMIN' || $_SESSION['role'] == 'ROLE_USER')){
         ?>
@@ -120,13 +103,6 @@ if(isset($_GET['deco'])){
         <?php
         }
         ?>
-=======
-      </ul>
-      <form class="form-inline my-2 my-lg-0" method="POST">
-        <input class="form-control mr-sm-2" type="email" placeholder="E-Mail">
-        <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Connexion</button>
->>>>>>> Formulaire
       </form>
     </div>
   </nav>
