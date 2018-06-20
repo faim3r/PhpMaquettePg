@@ -1,4 +1,4 @@
-<footer class="bg-dark mt-3">
+<footer class="bg-dark mt-3 position-absolute fixed-bottom">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="m-auto">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
