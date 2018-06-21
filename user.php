@@ -1,7 +1,7 @@
 <?php
 session_start();
 ///si l'utilisateur admin est connecté:
-if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['role'] == 'ROLE_ADMIN')){
+// if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['role'] == 'ROLE_ADMIN')){
 ?>
 <?php include('inc/header.php') ?>
 <!DOCTYPE html>
@@ -13,14 +13,14 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Blog</a>
+          <a class="navbar-brand" href="#">BACKOFFICE</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="user_product.php">modifier un article <span class="sr-only">(current)</span></a>
               </li>
 
             </ul>
@@ -28,8 +28,8 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <h2>Ajouter un utilisateur</h2>
+                <div class="col-md-6">
+                    <h3>Ajouter un utilisateur</h3>
                     <?php
                     require_once('inc/bdd.php');
                     //traitement de l'inscription
@@ -98,41 +98,75 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['
 
 
                     ?>
+                           <!--  /////////////////////////////////  FORMULAIRE POUR ENTRER UN UTILISATEUR /////////////////////////////////// -->
                     <form method="post">
+            
                         <div class="form-group">
-                            <label>Nom</label>
-                            <input type="text" name="Nom" class="form-control">
+                            <input type="text" name="Nom" class="form-control" placeholder="Nom">
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" name="email" class="form-control">
+                            <input type="text" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">           
+                            <input type="text" name="tel" class="form-control" placeholder="Votre télephone">
                         </div>
                         <div class="form-group">
-                            <label>Tél</label>
-                            <input type="text" name="tel" class="form-control">
+                            <input type="password" name="mdp" class="form-control" placeholder="Votre mot de passe">
                         </div>
                         <div class="form-group">
-                            <label>Mot de passe</label>
-                            <input type="password" name="mdp" class="form-control">
+                            <input type="password" name="mdp2" class="form-control" placeholder="Répéter votre mot de passe">
                         </div>
                         <div class="form-group">
-                            <label>Répéter le mdp</label>
-                            <input type="password" name="mdp2" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Role</label>
+                            <label>Role de l utilisateur</label>
                             <select name="role" class="form-control">
-                                <option value="ROLE_USER">user de base</option>
+                                <option value="ROLE_USER">user basique</option>
                                 <option value="ROLE_AUTEUR">auteur</option>
                                 <option value="ROLE_ADMIN">admin</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-info">Ajouter</button>
                     </form>
-                    
+                    <!--  /////////////////////////////////  FORMULAIRE POUR ENTRER UN UTILISATEUR /////////////////////////////////// -->                   
+                </div>
+
+                <div class="col-md-4">
+                <h4>Modifier les coordonnées du magasin</h4>
+                <!--  /////////////////////////////////  FORMULAIRE POUR MODIFIER LES COORDONNEES DE LA BOUTIQUE /////////////////////////////////// -->
+                <form method="post">  
+                    <div class="form-group">
+                        <input type="text" name="adresse" class="form-control" placeholder="adresse de la boutique">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="mail" class="form-control" placeholder="Email de la boutique">
+                    </div>
+                    <div class="form-group">           
+                        <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
+                    </div>
+                    <button type="submit" class="btn btn-info">Ajouter</button>
+                </form>                  
+                <!--  /////////////////////////////////  FORMULAIRE POUR MODIFIER LES COORDONNEES DE LA BOUTIQUE /////////////////////////////////// -->
                 </div>
                 <div class="col-md-4">
+                <hr>
+                <h4>gérer les produits</h4>
+                <h4>modifier un produit</h4>
+                <!--  /////////////////////////////////  FORMULAIRE POUR GERER LES PRODUITS /////////////////////////////////// -->
+                <form method="post">  
+                    <div class="form-group">
+                        <input type="text" name="nomproduit" class="form-control" placeholder="nomproduit">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="mail" class="form-control" placeholder="Email de la boutique">
+                    </div>
+                    <div class="form-group">           
+                        <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
+                    </div>
+                    <button type="submit" class="btn btn-info">Ajouter</button>
+                </form>                  
+                <!--  /////////////////////////////////  FORMULAIRE POUR GERER LES PRODUITS /////////////////////////////////// -->
                 </div>
+                
+
             </div>
         </div>
 
@@ -141,8 +175,8 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['
 </body>
 </html>
 <?php
-}
-else{
-    echo 'pas le droit';
-}
+// }
+// else{
+//     echo 'pas le droit';
+// }
 ?>
