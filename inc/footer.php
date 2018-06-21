@@ -7,7 +7,7 @@
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Produits</a>
+                        <a class="nav-link" href="products.php">Produits</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="formulaire_contact.php">Contact</a>
