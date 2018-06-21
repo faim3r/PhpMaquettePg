@@ -17,8 +17,12 @@
         </div>
     </nav>
     <section class="container text-center pb-3 text-light mt-2">
-        <p>1-3, Rue des Trois-Conils</p>
-        <p>05.56.46.58.08</p>
+        <?php
+        $change = $bdd->query('SELECT shop_address, shop_phone FROM shop');
+        $address = $change->fetch();
+        ?>
+        <p><?= $address['shop_address'] ?></p>
+        <p><?= $address['shop_phone'] ?></p>
         <h5>Site propulsé par Julien, Thomas, Pierre, Stéphane et David</h5>
     </section>
 </footer>

@@ -68,7 +68,7 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_USER' OR $_SESSION['ro
                                 echo '<h2>Utilisateur ajouté</h2>';
                             } else {
                                 foreach ($errors as $error) {
-                                    echo '<span style="color: red">'.$error . '</span><br>';
+                                    echo '<span class="text-danger">'.$error . '</span><br>';
                                 }
                             }
                         }
@@ -113,26 +113,68 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_USER' OR $_SESSION['ro
                                 ?>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-info">Ajouter</button>
+                        <button type="submit" class="btn btn-warning">Ajouter</button>
                     </form>
                     <!--  /////////////////////////////////  FORMULAIRE POUR ENTRER UN UTILISATEUR /////////////////////////////////// -->                   
                 </div>
 
                 <div class="col-md-4">
                 <h4>Modifier les coordonnées du magasin</h4>
-                <!--  /////////////////////////////////  FORMULAIRE POUR MODIFIER LES COORDONNEES DE LA BOUTIQUE /////////////////////////////////// -->
-                <form method="post">  
-                    <div class="form-group">
-                        <input type="text" name="adresse" class="form-control" placeholder="adresse de la boutique">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="mail" class="form-control" placeholder="Email de la boutique">
-                    </div>
-                    <div class="form-group">           
-                        <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
-                    </div>
-                    <button type="submit" class="btn btn-info">Ajouter</button>
-                </form>                  
+
+                    <!--  /////////////////////////////////  FORMULAIRE POUR MODIFIER LES COORDONNEES DE LA BOUTIQUE /////////////////////////////////// -->
+
+                    <form method="POST">
+                        <div class="form-group">
+                            <input type="text" name="address" class="form-control" placeholder="adresse de la boutique">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="mail" class="form-control" placeholder="Email de la boutique">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
+                        </div>
+                        <button type="submit" class="btn btn-warning">Ajouter</button>
+                    </form>
+
+                    <?php
+                    if(!empty($_POST)){
+                        //si post n'est pas vide, c'est que l'utilisateur a bien envoyé quelque chose
+
+                        $errors = [];
+
+                        if(empty($_POST['address'])){
+                            $errors[] = 'Veuillez entrer une adresse valide';
+                        }
+
+                        if(!isset($_POST['mail']) OR !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)){
+                            $errors[] = 'Veuillez entrer un E-Mail valide';
+                        }
+
+                        if(empty($_POST['tel']) || !preg_match('#^[0][0-9]{9}$#', $_POST['tel'])){
+                            $errors[] = 'Veuillez entrer un numéro de téléphone valide';
+                        }
+
+                        if(empty($errors)){
+                            //Utiliser une requête préparée
+                            $modifier = $bdd->prepare('UPDATE shop SET shop_address = :shop_address, shop_mail = :shop_mail, shop_phone = :shop_phone WHERE id = 1');
+                            $modifier->bindValue(':shop_address', htmlspecialchars($_POST['address']));
+                            $modifier->bindValue(':shop_mail', htmlspecialchars($_POST['mail']));
+                            $modifier->bindValue(':shop_phone', htmlspecialchars($_POST['tel']));
+                            $modifier->execute();
+                            ?>
+                            <h3 class="alert alert-success col-lg-7 m-auto text-center">
+                                Coordonnées modifié !
+                            </h3>
+                            <?php
+                        }else{
+                            //on affiche les erreurs
+                            foreach ($errors as $error){
+                                echo '<p class="text-danger">'.$error.'</p>';
+                            }
+
+                        }
+                    }
+                    ?>
                 <!--  /////////////////////////////////  FORMULAIRE POUR MODIFIER LES COORDONNEES DE LA BOUTIQUE /////////////////////////////////// -->
                 </div>
                 <div class="col-md-4">
@@ -150,7 +192,7 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_USER' OR $_SESSION['ro
                     <div class="form-group">           
                         <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
                     </div>
-                    <button type="submit" class="btn btn-info">Ajouter</button>
+                    <button type="submit" class="btn btn-warning">Ajouter</button>
                 </form>                  
                 <!--  /////////////////////////////////  FORMULAIRE POUR GERER LES PRODUITS /////////////////////////////////// -->
                 </div>

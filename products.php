@@ -77,14 +77,14 @@ if ($_GET) {
         $verifTrier = strip_tags($_GET['price']);
     }
 
-    $requete = "SELECT products.id AS idProduit, photo, price, name, categories.id AS idCateg FROM products INNER JOIN categories ON products.categories_id = categories.id";
+    $requete = "SELECT products.id AS idProduit, photo, price, name_product, categories.id AS idCateg FROM products INNER JOIN categories ON products.categories_id = categories.id";
 
     if (!empty($nomProduit) AND !empty($verifCategories)){
-        $requete .= " WHERE categories.id = :categories_id AND products.name LIKE :nomProduits";
+        $requete .= " WHERE categories.id = :categories_id AND products.name_product LIKE :nomProduits";
     }
-    if (!empty ($nomProduit)) {
-        $requete .= " WHERE products.name LIKE :nomProduits";
-    } if (!empty($verifCategories)) {
+    elseif (!empty ($nomProduit)) {
+        $requete .= " WHERE products.name_product LIKE :nomProduits";
+    } elseif (!empty($verifCategories)) {
         $requete .= " WHERE categories.id = :categories_id";
 
     }
@@ -124,13 +124,13 @@ if ($_GET) {
                     <?php
                     if(!empty($_GET['nomProduit'])){
                         ?>
-                    <h5><?=preg_replace('#('.$_GET['nomProduit'].')#i', "<span class='bg-warning'>$1</span>", $article['name']);?><br></h5>
+                    <h5><?=preg_replace('#('.$_GET['nomProduit'].')#i', "<span class='bg-warning'>$1</span>", $article['name_product']);?><br></h5>
                         <?php
                     }
                     else{
                         ?>
 
-                        <h5><?=$article['name'];?><br></h5>
+                        <h5><?=$article['name_product'];?><br></h5>
                         <?php
                     }
                     ?>
@@ -161,7 +161,7 @@ if ($_GET) {
     foreach ($afficheProduits as $afficheProduit) {
         ?>
         <div class="show">
-            <h5><?= $afficheProduit['name'] . '<br>' ?></h5>
+            <h5><?= $afficheProduit['name_product'] . '<br>' ?></h5>
             <a href="fiche_produit.php?idProduit=<?=$afficheProduit['id']?>"><img src="<?= $afficheProduit['photo'] ?>"></a><br>
             <h3><?=$afficheProduit['price']?> €</h3>
         </div>
