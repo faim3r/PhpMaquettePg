@@ -62,7 +62,7 @@ session_start();
                                 <?php
                                 } 
                             ?>
-                        </select>,  
+                        </select>
                         <button class="btn btn-default" type="submit">Voir</button>
                     </form>
                     <p>OU</p>
