@@ -4,7 +4,7 @@
     box-shadow: 0px 0px 5px #343a40;
     max-width: 260px;
 }
-.show h3{
+.show h5, h3{
     text-align: center;
 }
 
