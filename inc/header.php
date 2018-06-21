@@ -96,7 +96,11 @@ if(isset($_GET['deco'])){
         <?php
         }
         ?>
+
       </form>
+        <?php
+
+        ?>
     </div>
   </nav>
 </header>

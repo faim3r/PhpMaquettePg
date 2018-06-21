@@ -1,7 +1,7 @@
 <?php
 session_start();
 ///si l'utilisateur admin est connecté:
-// if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_AUTEUR' OR $_SESSION['role'] == 'ROLE_ADMIN')){
+if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_USER' OR $_SESSION['role'] == 'ROLE_ADMIN')){
 ?>
 <?php include('inc/header.php') ?>
 <!DOCTYPE html>
@@ -175,8 +175,8 @@ session_start();
 </body>
 </html>
 <?php
-// }
-// else{
-//     echo 'pas le droit';
-// }
+ }
+ else{
+     echo 'pas le droit';
+ }
 ?>
