@@ -55,7 +55,7 @@ if(isset($_GET['deco'])){
               $mdpCryp = $resultat[0]['password'];
             }
   
-            if(isset($mdpCryp) && trim($_POST['password'])){      
+            if(isset($mdpCryp) && password_verify(trim($_POST['password']), $mdpCryp)){
               $_SESSION['id'] = $resultat[0]['id'];
               $_SESSION['email'] = strip_tags($_POST['email']);
               $_SESSION['user_name'] = $resultat[0]['user_name'];
