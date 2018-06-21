@@ -1,0 +1,14 @@
+body{
+    margin-bottom: 100px;
+
+}
+
+footer{
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+}
+#fantome{
+
+    color: white;
+}
