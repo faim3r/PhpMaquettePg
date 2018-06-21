@@ -119,9 +119,18 @@ session_start();
                         <div class="form-group">
                             <label>Role de l utilisateur</label>
                             <select name="role" class="form-control">
-                                <option value="ROLE_USER">user basique</option>
-                                <option value="ROLE_AUTEUR">auteur</option>
-                                <option value="ROLE_ADMIN">admin</option>
+                                <option value="ROLE_USER">Rôle...</option>
+                                <?php
+                                //requete pour afficher les roles
+
+                                $requete = $bdd ->query( "SELECT * from users GROUP BY role");
+                                $roles = $requete ->fetchAll();
+                                foreach ($roles as $role){
+                                    ?>
+                                    <option value="<?= $role['role'] ?>"><?= $role['role'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-info">Ajouter</button>
