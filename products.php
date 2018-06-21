@@ -80,7 +80,7 @@ if ($_GET) {
         $verifTrier = strip_tags($_GET['price']);
     }
 
-    $requete = "SELECT * FROM products INNER JOIN categories ON products.categories_id = categories.id";
+    $requete = "SELECT products.id AS idProduit, photo, price, name, categories.id AS idCateg FROM products INNER JOIN categories ON products.categories_id = categories.id";
 
     if (!empty($nomProduit) AND !empty($verifCategories)){
         $requete .= " WHERE categories.id = :categories_id AND products.name LIKE :nomProduits";
@@ -137,7 +137,7 @@ if ($_GET) {
                         <?php
                     }
                     ?>
-                    <img src="<?=$article['photo']?>"><br>
+                    <a href="fiche_produit.php?idProduit=<?=$article['idProduit']?>"><img src="<?=$article['photo']?>"></a><br>
                     <h3><?=$article['price']?> €</h3>
                 </div>
                 <?php
@@ -165,7 +165,7 @@ if ($_GET) {
         ?>
         <div class="show">
             <h5><?= $afficheProduit['name'] . '<br>' ?></h5>
-            <img src="<?= $afficheProduit['photo'] ?>"><br>
+            <a href="fiche_produit.php?idProduit=<?=$afficheProduit['id']?>"><img src="<?= $afficheProduit['photo'] ?>"></a><br>
             <h3><?=$afficheProduit['price']?> €</h3>
         </div>
         <?php

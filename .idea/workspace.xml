@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97768007-5cd6-4900-80fb-969462106a3d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/products.css" afterPath="$PROJECT_DIR$/products.css" />
       <change beforePath="$PROJECT_DIR$/products.php" afterPath="$PROJECT_DIR$/products.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +16,13 @@
       <file leaf-file-name="products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+            <state relative-caret-position="397">
+              <caret line="167" column="128" lean-forward="false" selection-start-line="167" selection-start-column="128" selection-end-line="167" selection-end-column="128" />
               <folding>
-                <marker date="1529572933766" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
-                <marker date="1529572933766" expanded="true" signature="3290:3376" ph="SELECT * FRO... products" />
-                <marker date="1529572933766" expanded="true" signature="5986:6008" ph="SELECT * FRO... products" />
-                <marker date="1529572933766" expanded="true" signature="6222:6259" ph="..." />
+                <marker date="1529573720411" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
+                <marker date="1529573720411" expanded="true" signature="3290:3445" ph="SELECT * FRO... products" />
+                <marker date="1529573720411" expanded="true" signature="6124:6146" ph="SELECT * FRO... products" />
+                <marker date="1529573720411" expanded="true" signature="6360:6397" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,12 +155,12 @@
       <updated>1529485016105</updated>
       <workItem from="1529485017417" duration="572000" />
       <workItem from="1529485628998" duration="8644000" />
-      <workItem from="1529566061311" duration="6358000" />
+      <workItem from="1529566061311" duration="7179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15574000" />
+    <option name="totallyTimeSpent" value="16395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -207,10 +206,10 @@
         <state relative-caret-position="308">
           <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
-            <marker date="1529572933766" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
-            <marker date="1529572933766" expanded="true" signature="3290:3376" ph="SELECT * FRO... products" />
-            <marker date="1529572933766" expanded="true" signature="5986:6008" ph="SELECT * FRO... products" />
-            <marker date="1529572933766" expanded="true" signature="6222:6259" ph="..." />
+            <marker date="1529573720411" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
+            <marker date="1529573720411" expanded="true" signature="3290:3445" ph="SELECT * FRO... products" />
+            <marker date="1529573720411" expanded="true" signature="6124:6146" ph="SELECT * FRO... products" />
+            <marker date="1529573720411" expanded="true" signature="6360:6397" ph="..." />
           </folding>
         </state>
       </provider>
@@ -265,13 +264,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+        <state relative-caret-position="397">
+          <caret line="167" column="128" lean-forward="false" selection-start-line="167" selection-start-column="128" selection-end-line="167" selection-end-column="128" />
           <folding>
-            <marker date="1529572933766" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
-            <marker date="1529572933766" expanded="true" signature="3290:3376" ph="SELECT * FRO... products" />
-            <marker date="1529572933766" expanded="true" signature="5986:6008" ph="SELECT * FRO... products" />
-            <marker date="1529572933766" expanded="true" signature="6222:6259" ph="..." />
+            <marker date="1529573720411" expanded="true" signature="1500:1541" ph="SELECT * fro... categories" />
+            <marker date="1529573720411" expanded="true" signature="3290:3445" ph="SELECT * FRO... products" />
+            <marker date="1529573720411" expanded="true" signature="6124:6146" ph="SELECT * FRO... products" />
+            <marker date="1529573720411" expanded="true" signature="6360:6397" ph="..." />
           </folding>
         </state>
       </provider>
