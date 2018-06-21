@@ -24,7 +24,7 @@ session_start();
         <div class="col-md-6">
             
                 <h2>Renouvellement du mot de passe</h2>
-                        <form method="post" action="mdp.php">
+                        <form method="post">
                             <div class="form-group">
                                 <label>Renseigner votre email</label>
                                 <input type="text" name="changement" class="form-control">
@@ -94,8 +94,8 @@ if(!empty($_POST)){
         //sujet
         $mail->Subject = 'Exemple';
         //contenu
-        $mail->Body = 'Veuillez cliquer <a href="http://localhost/promo7/mdpoublie/traitementreset.php?user_id=' . $users[0]['id'] . '&token=' . $token . '">Ici</a>';
-                    echo '<p>Cliquez<a href="http://localhost/promo7/mdpoublie/traitementreset.php?user_id=' . $users[0]['id'] . '&token=' . $token . '"">Ici</a></p>';
+        $mail->Body = 'Veuillez cliquer <a href="http://localhost/promo7/catalog/reset.php?user_id=' . $users[0]['id'] . '&token=' . $token . '">Ici</a>';
+                    echo '<p>Cliquez<a href="http://localhost/promo7/catalog/reset.php?user_id=' . $users[0]['id'] . '&token=' . $token . '"">Ici</a></p>';
         }
         else{
             echo '<p class="alert alert-warning"> Votre mail n\'est pas reconnu </p>';
