@@ -1,7 +1,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylsheet" href="app/css/style.css">
 </head>
-<body>
+<body class='h-100'>
 
 <?php
 require_once('inc/bdd.php');
@@ -33,7 +33,7 @@ if(isset($_GET['deco'])){
           <a class="nav-link" href="formulaire_contact.php">Contact</a>
         </li>
         <?php
-        if(!empty($_POST)){
+        if(!empty($_POST['connexion'])){
           //si post n'est pas vide, c'est que l'utilisateur a bien envoyé quelquechose
           $errors = [];
           
@@ -71,6 +71,9 @@ if(isset($_GET['deco'])){
         <li class="nav-item">
           <a class="nav-link" href="user.php">Mon Profil</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mdp.php">Securité</a>
+        </li>
         <?php
         }
         ?>
@@ -83,7 +86,7 @@ if(isset($_GET['deco'])){
           <input class="form-control mr-sm-2" type="email" name="email" placeholder="E-Mail">
           <input class="form-control mr-sm-2" type="password" name="password" placeholder="Mot de passe">
           <input type="hidden" name="id">
-          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Connexion</button>
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" value='2' name='connexion'>Connexion</button>
         <?php
         }
         ?>

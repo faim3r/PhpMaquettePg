@@ -38,20 +38,20 @@ session_start();
                             </div>
                             <div class="form-group mt-3">
                                 <label>Email</label>
-                                <input type="text" name="email" class="form-control">
+                                <input type="text" name="email1" class="form-control">
                             </div>
                             <div class="form-group mt-3">
                                 <label>Message</label>
                                 <textarea name="message" class="form-control"></textarea>
                             </div>
                             <div class="form-group mt-3">
-                            <button type="submit" class="text center btn btn-warning">Envoyer</button>
+                            <button type="submit" name="action" value='1' class="text center btn btn-warning">Envoyer</button>
                             </div>
-                        </form>  
+                        </form> 
 
         <?php
         
-            if(!empty($_POST)){
+        if(!empty($_POST['action'])){
                     //on crée la variable qui va contenir les éventuelles erreurs
                     $errors = [];
 
@@ -67,7 +67,7 @@ session_start();
                     }
                      
 
-                    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                    if(!filter_var($_POST['email1'], FILTER_VALIDATE_EMAIL)){
                         //le paramètre email n'existe pas ou mauvaise syntaxe
                         $errors[] = 'Votre mail n\'est pas correct'; 
                     }
@@ -84,6 +84,7 @@ session_start();
                         }
                     }                       
             }
+        
         
         ?>
             </div>
@@ -113,7 +114,7 @@ session_start();
     </section>
 
     <?php
-    //header 
+    //footer
     include('inc/footer.php');
     ?>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZYD3Cuv3OtkiGITmjz_NUOVeTkUC71nw&callback=initMap"></script>
