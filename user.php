@@ -181,20 +181,7 @@ if(isset($_SESSION['id']) AND ($_SESSION['role'] == 'ROLE_USER' OR $_SESSION['ro
                 <hr>
                 <h4>gérer les produits</h4>
                 <h4>modifier un produit</h4>
-                <!--  /////////////////////////////////  FORMULAIRE POUR GERER LES PRODUITS /////////////////////////////////// -->
-                <form method="post">  
-                    <div class="form-group">
-                        <input type="text" name="nomproduit" class="form-control" placeholder="nomproduit">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="mail" class="form-control" placeholder="Email de la boutique">
-                    </div>
-                    <div class="form-group">           
-                        <input type="text" name="tel" class="form-control" placeholder="télephone de la boutique">
-                    </div>
-                    <button type="submit" class="btn btn-warning">Ajouter</button>
-                </form>                  
-                <!--  /////////////////////////////////  FORMULAIRE POUR GERER LES PRODUITS /////////////////////////////////// -->
+                
                 </div>
                 
 
