@@ -45,7 +45,7 @@ include ('inc/header.php');
                     </select>
                     <div class="container">
                         <div class="row">
-                            <button type="submit" class="btn btn-info col-2" id="submit">Rechercher</button>
+                            <button type="submit" class="btn btn-warning col-2" id="submit">Rechercher</button>
                             <a href="products.php" class="btn btn-info col-2 offset-8" id="reset">reset</a>
                             <!--<button type="reset" class="btn btn-info col-2 offset-8" id="reset">Reset</button>-->
                         </div>
@@ -106,9 +106,10 @@ if ($_GET) {
             echo('<div class="container" >');
             echo('<div class="row">');
             foreach ($articles as $article) {
+                //<?= preg_replace('#('.$titre.')#i', "<span style='background: aquamarine;'>$1</span>"
                 ?>
                 <div class="show">
-                    <p><?=$article['name'].'<br>'?></p>
+                    <p><?=preg_replace('#('.$_GET['nomProduit'].')#i', "<span class='bg-warning'>$1</span>", $article['name']);?><br></p>
                     <img src="<?=$article['photo']?>"><br></p>
                 </div>
                 <?php
