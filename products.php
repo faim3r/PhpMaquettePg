@@ -138,7 +138,8 @@ else {
             ?>
             <div class="show">
                 <h3><?= $afficheProduit['name'] . '<br>' ?></h3>
-                <img src="<?= $afficheProduit['photo'] ?>"><br></p>
+                <img src="<?= $afficheProduit['photo'] ?>"><br>
+                <h3><?=$afficheProduit['price']?> €</h3>
             </div>
             <?php
         }
